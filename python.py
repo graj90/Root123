@@ -23,6 +23,8 @@ choice = input("Enter choice (1/2/3/4): ")
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
 
+
+
 if choice == '1':
     print(num1, "+", num2, "=", add(num1, num2))
 elif choice == '2':
@@ -31,5 +33,27 @@ elif choice == '3':
     print(num1, "*", num2, "=", multiply(num1, num2))
 elif choice == '4':
     print(num1, "/", num2, "=", divide(num1, num2))
+else:
+    print("Invalid Input")
+    def kg_to_pounds(kg):
+    return kg * 2.20462
+
+def pounds_to_kg(pounds):
+    return pounds / 2.20462
+
+print("Select conversion:")
+print("1. KG to Pounds")
+print("2. Pounds to KG")
+
+choice = input("Enter choice (1/2): ")
+
+if choice == '1':
+    kg = float(input("Enter weight in KG: "))
+    pounds = kg_to_pounds(kg)
+    print(kg, "KG =", pounds, "Pounds")
+elif choice == '2':
+    pounds = float(input("Enter weight in Pounds: "))
+    kg = pounds_to_kg(pounds)
+    print(pounds, "Pounds =", kg, "KG")
 else:
     print("Invalid Input")
